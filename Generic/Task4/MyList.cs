@@ -27,11 +27,18 @@ namespace Task4
         }
         public void Add(T obj)
         {
-            for (int i = count; i < array.Length; i++)
+             if (size - 1 > count)
             {
-                array[i] = obj;
+                array[count] = obj;
+                count++;
             }
-            count++;
+            else
+            {
+                size++;
+                Array.Resize<T>(ref array, size);
+                array[count] = obj;
+                count++;
+            }
         }
 
         public void Remove(int index)
