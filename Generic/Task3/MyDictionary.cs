@@ -25,7 +25,7 @@ namespace Task3
         }
         public void Add(TKey key, TValue val)
         {
-            if (size > count)
+            if (size - 1 > count)
             {
                 keys[count] = key;
                 vals[count] = val;
