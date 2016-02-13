@@ -33,7 +33,7 @@ namespace Task2
         }
         public void Add(T obj)
         {
-            if (size > count)
+            if (size - 1 > count)
             {
                 array[count] = obj;
                 count++;
